@@ -6,8 +6,7 @@ class TestCalculator:
         # Открыть страницу калькулятора
         calc_page = CalculatorPage(chrome_driver)
         url = (
-            "https://bonigarcia.dev/selenium-webdriver-java/slow-"
-            "calculator.html"
+            "https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html"
         )
         calc_page.open(url)
 
