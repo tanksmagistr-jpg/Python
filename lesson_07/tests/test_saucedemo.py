@@ -1,8 +1,8 @@
-﻿import pytest
-from pages.login_page import LoginPage
+﻿from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
 from pages.checkout_page import CheckoutPage
+
 
 class TestSauceDemo:
     def test_total_price(self, firefox_driver):
@@ -24,11 +24,11 @@ class TestSauceDemo:
         cart_page = CartPage(firefox_driver)
         cart_page.proceed_to_checkout()
 
-        # Заполнение формы (замените на свои данные)
+        # Заполнение формы
         checkout_page = CheckoutPage(firefox_driver)
         checkout_page.fill_customer_info("Ivan", "Petrov", "123456")
 
         # Чтение итоговой суммы
-        total_text = checkout_page.get_total()  # "Total: $58.29"
+        total_text = checkout_page.get_total()
         total_value = total_text.split("$")[1]
         assert total_value == "58.29"

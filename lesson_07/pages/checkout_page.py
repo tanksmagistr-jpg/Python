@@ -1,5 +1,6 @@
-from selenium.webdriver.common.by import By
+﻿from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
+
 
 class CheckoutPage(BasePage):
     FIRST_NAME_INPUT = (By.ID, "first-name")
@@ -15,5 +16,4 @@ class CheckoutPage(BasePage):
         self.click(self.CONTINUE_BUTTON)
 
     def get_total(self):
-        """Возвращает итоговую сумму в виде строки, например 'Total: $58.29'"""
         return self.get_text(self.TOTAL_LABEL)

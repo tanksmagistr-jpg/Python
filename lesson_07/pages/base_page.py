@@ -1,5 +1,6 @@
-from selenium.webdriver.support.ui import WebDriverWait
+﻿from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 
 class BasePage:
     def __init__(self, driver):
@@ -18,4 +19,6 @@ class BasePage:
         element.send_keys(text)
 
     def get_text(self, locator):
-        return self.wait.until(EC.visibility_of_element_located(locator)).text
+        return self.wait.until(
+            EC.visibility_of_element_located(locator)
+        ).text
