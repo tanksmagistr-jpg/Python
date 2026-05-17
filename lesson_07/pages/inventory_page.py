@@ -1,5 +1,6 @@
-from selenium.webdriver.common.by import By
+﻿from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
+
 
 class InventoryPage(BasePage):
     ADD_BACKPACK = (By.ID, "add-to-cart-sauce-labs-backpack")
